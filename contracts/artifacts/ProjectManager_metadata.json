@@ -1,0 +1,271 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_Admin",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ProjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Budget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ResourceCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "ResourceDetails",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					}
+				],
+				"name": "CreateProject",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "result",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "Message",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ProjectID",
+						"type": "string"
+					}
+				],
+				"name": "GetProjectData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "ProjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Budget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ResourceCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "ResourceDetails",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "result",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "Message",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "Manager",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "ProjectDetails",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "ProjectName",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Budget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ResourceCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "ResourceDetails",
+						"type": "bytes"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Remarks",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "ProjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "Budget",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "ResourceCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "ResourceDetails",
+						"type": "string"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "Remarks",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ProjectID",
+						"type": "string"
+					}
+				],
+				"name": "UpdatedProject",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "result",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "Message",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ProjectManager.sol": "ProjectManager"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ProjectManager.sol": {
+			"keccak256": "0xc37752bdfde52f94485da4fe1d86aea7e77058668fd26ef1072dcec729c3a548",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7f1193febe4b2c92d275ed4c722e7eade6d8e87177fd9e5aed6c24c308b79dbe",
+				"dweb:/ipfs/QmcStuHn9eEbLRo8194tNk8F5XVoLtoMvZ4EciEUwyLDb7"
+			]
+		}
+	},
+	"version": 1
+}
