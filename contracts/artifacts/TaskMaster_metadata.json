@@ -9,7 +9,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_Admin",
+						"name": "_admin",
 						"type": "address"
 					}
 				],
@@ -19,24 +19,29 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "ProjectName",
-						"type": "string"
+						"internalType": "bytes",
+						"name": "ProjectID",
+						"type": "bytes"
 					},
 					{
-						"internalType": "uint256",
-						"name": "Budget",
-						"type": "uint256"
+						"internalType": "bytes",
+						"name": "Taskname",
+						"type": "bytes"
 					},
 					{
-						"internalType": "uint256",
-						"name": "ResourceCount",
-						"type": "uint256"
+						"internalType": "int256",
+						"name": "Priority",
+						"type": "int256"
 					},
 					{
-						"internalType": "string",
+						"internalType": "bytes",
+						"name": "Description",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
 						"name": "ResourceDetails",
-						"type": "string"
+						"type": "bytes"
 					},
 					{
 						"internalType": "int256",
@@ -44,12 +49,12 @@
 						"type": "int256"
 					},
 					{
-						"internalType": "string",
+						"internalType": "bytes",
 						"name": "Remarks",
-						"type": "string"
+						"type": "bytes"
 					}
 				],
-				"name": "CreateProject",
+				"name": "CreateTask",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -69,26 +74,31 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "ProjectID",
+						"name": "TaskID",
 						"type": "string"
 					}
 				],
-				"name": "GetProjectData",
+				"name": "GetTask",
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "ProjectName",
+						"name": "ProjectID",
 						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "Budget",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "Taskname",
+						"type": "string"
 					},
 					{
-						"internalType": "uint256",
-						"name": "ResourceCount",
-						"type": "uint256"
+						"internalType": "int256",
+						"name": "Priority",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "Description",
+						"type": "string"
 					},
 					{
 						"internalType": "string",
@@ -120,114 +130,130 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "Manager",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "TaskDetails",
 				"outputs": [
 					{
+						"internalType": "bytes",
+						"name": "ProjectID",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Taskname",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Description",
+						"type": "bytes"
+					},
+					{
+						"internalType": "int256",
+						"name": "Priority",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "ResourceDetails",
+						"type": "bytes"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Remarks",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes",
+						"name": "ProjectID",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Taskname",
+						"type": "bytes"
+					},
+					{
+						"internalType": "int256",
+						"name": "Priority",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Description",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "ResourceDetails",
+						"type": "bytes"
+					},
+					{
+						"internalType": "int256",
+						"name": "Status",
+						"type": "int256"
+					},
+					{
+						"internalType": "bytes",
+						"name": "Remarks",
+						"type": "bytes"
+					},
+					{
+						"internalType": "string",
+						"name": "TaskID",
+						"type": "string"
+					}
+				],
+				"name": "UpdateTask",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "result",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "Message",
+						"type": "string"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
-						"name": "",
+						"name": "_address",
 						"type": "address"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"name": "ProjectDetails",
-				"outputs": [
-					{
-						"internalType": "bytes",
-						"name": "ProjectName",
-						"type": "bytes"
-					},
-					{
-						"internalType": "uint256",
-						"name": "Budget",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "ResourceCount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bytes",
-						"name": "ResourceDetails",
-						"type": "bytes"
-					},
-					{
-						"internalType": "int256",
-						"name": "Status",
-						"type": "int256"
-					},
-					{
-						"internalType": "bytes",
-						"name": "Remarks",
-						"type": "bytes"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "ProjectName",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "Budget",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "ResourceCount",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "ResourceDetails",
-						"type": "string"
-					},
-					{
-						"internalType": "int256",
-						"name": "Status",
-						"type": "int256"
-					},
-					{
-						"internalType": "string",
-						"name": "Remarks",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "ProjectID",
-						"type": "string"
-					}
-				],
-				"name": "UpdatedProject",
+				"name": "isTaskOwnerExists",
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "result",
+						"name": "",
 						"type": "bool"
-					},
-					{
-						"internalType": "string",
-						"name": "Message",
-						"type": "string"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -244,7 +270,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ProjectManager.sol": "ProjectManager"
+			"contracts/TaskMaster.sol": "TaskMaster"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -258,12 +284,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/ProjectManager.sol": {
-			"keccak256": "0xb604836c17a2f8b3fdc9ba99ce1b39b27147a5e1bf70cd02fa7e45867f78c7e4",
+		"contracts/TaskMaster.sol": {
+			"keccak256": "0x21cedc997bde510d8f172dff20ee7524b4f5e2bfd8ed0e13f504be8e8bf53bea",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a6d2035d052bd7c1333823d0bc22f872e20cf703cf6c94d9ccf8f428a59bc00d",
-				"dweb:/ipfs/QmXzd5TzadDkNrHZduRc9ciGQiBcW7fkioPMZtLnKUTtW3"
+				"bzz-raw://0d4e10246a104e6c38b9bfa8c3e8bc86d930f82a29f57e626ab690e9c4c1d39d",
+				"dweb:/ipfs/QmbbXTnyrLGLmW5Q2yQcHnzpjpAmyk81tBgucK3QkqhXsG"
 			]
 		}
 	},

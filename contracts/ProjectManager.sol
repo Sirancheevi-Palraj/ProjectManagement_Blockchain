@@ -97,7 +97,7 @@ contract ProjectManager {
         string memory ProjectID = uintToStringWithZeroPadding(ProjectCount, 10);
         ProjectDetails[ProjectID] = ProjectInformationObj;
         result = true;
-        Message = "Successfully Created";
+        Message = ProjectID;
     }
 
     //Utility functions
